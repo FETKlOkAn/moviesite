@@ -1,0 +1,282 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieSite</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .topnav a:link,
+        .topnav a:visited {
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            background-color: rgb(39, 39, 39);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .topnav a:hover {
+            background-color: #555;
+        }
+
+        .topnav a:active,
+        .topnav a.active {
+            background-color: black;
+        }
+
+    .topnav {
+        overflow: hidden;
+        background-color: rgb(39, 39, 39);
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        
+         }
+
+    .topnav form {
+            padding: 15px;
+            margin-right: 50px;
+            background-color: black;
+            width: 300px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+    .topnav a {
+            margin-top: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+    }
+    .form-group {
+            background-color: rgb(13, 94, 216);
+            margin: 30px;
+            padding: 60px;
+            font-size: large;
+            font-size: 30px;
+        }
+
+        .form-check {
+            background-color: rgb(47, 255, 82);
+            margin: 30px;
+            padding: 60px;
+        }
+
+        .form-check:hover {
+            background: linear-gradient(90deg, rgba(63,255,24,1) 0%, rgba(0,168,255,1) 46%, rgba(25,22,22,1) 100%);
+            background-size: 200% 200%;
+            animation: gradientAnimation 5s ease infinite;
+            margin: 30px;
+            padding: 60px;
+            transition: transform 0.2s;
+            transform: scale(1.05);
+        }
+
+        .form-check-input:checked + .form-check-label {
+            background: linear-gradient(90deg, rgba(63,255,24,1) 0%, rgba(0,168,255,1) 46%, rgba(25,22,22,1) 100%);
+            background-size: 200% 200%;
+            animation: gradientAnimation 5s ease infinite;
+            margin: -30px;
+            padding: 60px;
+            transition: transform 0.2s;
+            transform: scale(1.05);
+        }
+
+        .form-check-label {
+            display: block;
+            padding: 10px;
+        }
+
+        .question-label {
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #result, button{
+            margin-left: 30px;
+        }
+</style>
+<body>
+    <nav class="topnav">
+        <a href="index.html">Movie Site</a>
+        <a href="History.html">History</a>
+        <a href="About.html">About</a>
+        <a href="Test.html">Test</a>
+        <div class="search-container">
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Movie Quiz</h2>
+        <form>
+            <div class="form-group">
+                <label for="question1">1. Who directed the movie "Inception"?</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question1" value="a">
+                    <label class="form-check-label">Steven Spielberg</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question1" value="b">
+                    <label class="form-check-label">Christopher Nolan</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question1" value="c">
+                    <label class="form-check-label">James Cameron</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question1" value="d">
+                    <label class="form-check-label">Quentin Tarantino</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="question2">2. Which movie won the Best Picture Oscar in 2020?</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question2" value="a">
+                    <label class="form-check-label">1917</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question2" value="b">
+                    <label class="form-check-label">Joker</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question2" value="c">
+                    <label class="form-check-label">Parasite</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question2" value="d">
+                    <label class="form-check-label">Ford v Ferrari</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="question3">3. Which actor played the main character in the movie "The Matrix"?</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question3" value="a">
+                    <label class="form-check-label">Keanu Reeves</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question3" value="b">
+                    <label class="form-check-label">Leonardo DiCaprio</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question3" value="c">
+                    <label class="form-check-label">Brad Pitt</label>
+                </div>
+            </div>
+
+            <!-- Additional questions -->
+            <div class="form-group">
+                <label for="question4">4. What is the highest-grossing film of all time?</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question4" value="a">
+                    <label class="form-check-label">Titanic</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question4" value="b">
+                    <label class="form-check-label">Avatar</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question4" value="c">
+                    <label class="form-check-label">Avengers: Endgame</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question4" value="d">
+                    <label class="form-check-label">Star Wars: The Force Awakens</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="question5">5. Which movie features the song "My Heart Will Go On"?</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question5" value="a">
+                    <label class="form-check-label">Titanic</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question5" value="b">
+                    <label class="form-check-label">The Bodyguard</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question5" value="c">
+                    <label class="form-check-label">A Star is Born</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question5" value="d">
+                    <label class="form-check-label">Beauty and the Beast</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="question6">6. Who played Jack Dawson in the movie "Titanic"?</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question6" value="a">
+                    <label class="form-check-label">Leonardo DiCaprio</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question6" value="b">
+                    <label class="form-check-label">Johnny Depp</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question6" value="c">
+                    <label class="form-check-label">Brad Pitt</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question6" value="d">
+                    <label class="form-check-label">Tom Cruise</label>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="checkAnswers()">Submit</button>
+        </form>
+        <div id="result" class="mt-3"></div>
+    </div>
+    
+
+    <footer class="footer bg-dark text-white text-center mt-5 p-3">
+        <p>Tomáš Maxim</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30">
+            </a>
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="30">
+            </a>
+            <a href="https://www.discord.com" target="_blank" aria-label="Discord">
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/98/Discord_logo.svg" alt="Discord" width="30">
+            </a>
+        </div>
+        <p>&copy; 2024 Tomáš Maxim. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function checkAnswers() {
+            const correctAnswers = ['b', 'c', 'a', 'd', 'a', 'c'];
+            let score = 0;
+            for (let i = 1; i <= 6; i++) {
+                const userAnswer = document.querySelector(`input[name="question${i}"]:checked`);
+                if (userAnswer && userAnswer.value === correctAnswers[i - 1]) {
+                    score++;
+                }
+            }
+            document.getElementById('result').innerText = `You scored ${score} out of 6`;
+        }
+    </script>
+</body>
+</html>
